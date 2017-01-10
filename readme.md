@@ -9,10 +9,9 @@ This is a small API to sign in to Office365 with a user context and then make th
 * Add the function below into `node_modules/node-outlook/calendar-apis.js`
 * Add your own values into .env file in root for `APP_ID`, `APP_SECRET` and `REDIRECT_URL` 
 * Run `npm start`
-
     
-    // Monkey Patched into API because there is
-    // no lib support for this REST method yet 
+Note: this code is monkey-patched into the API because there is no lib support for this REST method yet.
+
     getCalendarView: function (parameters, callback) {
         var userSpec = utilities.getUserSegment(parameters);
 
