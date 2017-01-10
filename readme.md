@@ -29,19 +29,19 @@ Note: this code is monkey-patched into the API because there is no lib support f
 
         base.makeApiCall(apiOptions, function (error, response) {
             if (error) {
-            if (typeof callback === 'function') {
-                callback(error, response);
-            }
+                if (typeof callback === 'function') {
+                    callback(error, response);
+                }
             }
             else if (response.statusCode !== 200) {
-            if (typeof callback === 'function') {
-                callback('REST request returned ' + response.statusCode + '; body: ' + JSON.stringify(response.body), response);
-            }
+                if (typeof callback === 'function') {
+                    callback('REST request returned ' + response.statusCode + '; body: ' + JSON.stringify(response.body), response);
+                }
             }
             else {
-            if (typeof callback === 'function') {
-                callback(null, response.body);
-            }
+                if (typeof callback === 'function') {
+                    callback(null, response.body);
+                }
             }
         });
     }
