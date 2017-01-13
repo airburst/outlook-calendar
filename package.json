@@ -4,6 +4,8 @@
   "description": "Outlook Calendar Integration",
   "main": "index.js",
   "scripts": {
+    "app": "node index.js",
+    "api" : "node api.js",
     "start": "node index.js"
   },
   "author": "Mark Fairhurst",

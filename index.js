@@ -17,6 +17,7 @@ var handle = {};
 handle['/'] = o.home;
 handle['/authorize'] = o.authorize;
 handle['/calendar'] = o.calendar;
+handle['/api/calendar'] = o.calendarApi;
 // handle['/new'] = o.addEvent;
 
 server.start(route, handle);
